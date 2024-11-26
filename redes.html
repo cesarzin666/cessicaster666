@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociales - Conéctate con Nosotros</title>
+    
+    <!-- Cargar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    
+    <!-- Cargar Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #000, #111, #000);
+            animation: gradientBG 10s infinite alternate;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        @keyframes gradientBG {
+            0% { background: linear-gradient(135deg, #000, #111, #000); }
+            100% { background: linear-gradient(135deg, #111, #000, #111); }
+        }
+
+        /* Contenedor Principal */
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+        }
+
+        /* Título */
+        .title {
+            font-size: 3.5em;
+            text-transform: uppercase;
+            color: #00ff00;
+            text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            margin-bottom: 30px;
+        }
+
+        /* Descripción general */
+        .description {
+            font-size: 1.5em;
+            color: #ddd;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .description span {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        /* Animación de texto */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilo de los botones */
+        .social-buttons {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-button {
+            background: radial-gradient(circle at top, #222, #000);
+            color: white;
+            border: 2px solid #00ff00;
+            border-radius: 15px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: popIn 0.5s ease-out;
+        }
+
+        .social-button i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #00ff00;
+        }
+
+        .social-button:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+        }
+
+        .social-button p {
+            font-size: 1em;
+            margin: 10px 0 0;
+        }
+
+        /* Animación de los botones */
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Estilo para la sección de contacto */
+        .contact-info {
+            margin-top: 40px;
+            color: white;
+            font-size: 1.1em;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+        }
+
+        .contact-info a {
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Línea decorativa */
+        .line {
+            height: 2px;
+            background: #00ff00;
+            margin: 30px 0;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Redes Sociales</h1>
+        <p class="description">
+            Conéctate con nosotros y no te pierdas ninguno de nuestros eventos y actualizaciones. ¡Síguenos en nuestras redes sociales y 
+            forma parte de la comunidad de <span>Torneos Bolivia</span>!
+        </p>
+
+        <div class="line"></div>
+
+        <div class="social-buttons">
+            <!-- Botón de WhatsApp -->
+            <a href="https://chat.whatsapp.com/BcsoCRGV9ae3N6JwbrzTJP" target="_blank" class="social-button">
+                <i class="fab fa-whatsapp"></i>
+                <p>Únete a nuestro grupo de WhatsApp</p>
+            </a>
+
+            <!-- Botón de Instagram -->
+            <a href="https://www.instagram.com/cessitar_x7/profilecard/?igsh=MWhkaDZ3amJvOGJ0Mg==" target="_blank" class="social-button">
+                <i class="fab fa-instagram"></i>
+                <p>Síguenos en Instagram</p>
+            </a>
+
+            <!-- Botón de YouTube -->
+            <a href="https://youtube.com/@cessitar_x7?si=YrSp7FobYKuxSEvy" target="_blank" class="social-button">
+                <i class="fab fa-youtube"></i>
+                <p>Visita nuestro canal de YouTube</p>
+            </a>
+
+            <!-- Botón de TikTok -->
+            <a href="https://www.tiktok.com/@cessitar_caster.x7?_t=8rhEmUISebY&_r=1" target="_blank" class="social-button">
+                <i class="fab fa-tiktok"></i>
+                <p>Síguenos en TikTok</p>
+            </a>
+        </div>
+
+        <div class="contact-info">
+            <p>¿Tienes preguntas o sugerencias? <br> ¡Contáctanos a través de nuestras redes o al siguiente número!</p>
+            <p>+591 64371867</p>
+        </div>
+    </div>
+
+</body>
+</html>

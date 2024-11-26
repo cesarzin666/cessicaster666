@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolivia Cup - El Último Llamado</title>
+    
+    <!-- Cargar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    
+    <!-- Cargar Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto; /* Habilita el desplazamiento vertical */
+            background-color: black;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Contenedor principal */
+        .content {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Título principal */
+        .title {
+            font-size: 8vw;
+            text-transform: uppercase;
+            color: #00ff00;
+            text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+            letter-spacing: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Subtítulo */
+        .subtitle {
+            font-size: 2vw;
+            color: #00ff00;
+            text-align: center;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            line-height: 1.5;
+            max-width: 80%;
+        }
+
+        /* Sección del torneo */
+        .tournament {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            max-width: 800px;
+            width: 90%;
+            color: #00ff00;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .tournament h2, .tournament h3 {
+            text-align: center;
+            color: #00ff00;
+            text-shadow: 0 0 15px #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .dates, .rules, .payment-methods, .modality {
+            margin-top: 20px;
+        }
+
+        .dates ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .dates li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .rules li, .payment-methods li {
+            margin-bottom: 10px;
+        }
+
+        /* Fondo animado de Particles.js */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Información de contacto */
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .contact-info a {
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fondo animado con Particles.js -->
+    <div id="particles-js"></div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <!-- Título del torneo -->
+        <h1 class="title">Bolivia Cup</h1>
+        <p class="subtitle">El Último Llamado</p>
+
+        <!-- Información del Torneo -->
+        <div class="tournament">
+            <h2>Torneo Disponible</h2>
+            <p><span class="highlight">Premio:</span> <br>
+            <strong>1er Lugar:</strong> 1000 BS <br>
+            <strong>2do Lugar:</strong> 400 BS</p>
+            
+            <p><span class="highlight">Formato del Torneo:</span> <br>
+            - 3 jornadas de juego. <br>
+            - Cada jornada incluye 3 salas de juego. <br>
+            - Las jornadas se realizan cada fin de semana.</p>
+
+            <p><span class="highlight">Características Especiales:</span> <br>
+            - Los torneos son completamente narrados en directo. <br>
+            - La final se disputará en salas de ligas profesionales.</p>
+
+            <p><span class="highlight">Casters de la Final:</span> <br>
+            - Cessitar Caster <br>
+            - Zaza Caster</p>
+
+            <div class="modality">
+                <h3>Modalidad del Torneo</h3>
+                <p><span class="highlight">Modalidad:</span> Battle Royale</p>
+                <p><span class="highlight">Mapa:</span> Mapa abierto</p>
+                <p><span class="highlight">Equipo:</span> Escuadra</p>
+            </div>
+
+            <div class="dates">
+                <h3>Fechas del Torneo</h3>
+                <ul>
+                    <li><strong>Primera Jornada:</strong> 30 de noviembre</li>
+                    <li><strong>Segunda Jornada:</strong> 7 de diciembre</li>
+                    <li><strong>Gran Final:</strong> 14 de diciembre</li>
+                </ul>
+            </div>
+
+            <div class="rules">
+                <h3>Reglas del Torneo</h3>
+                <ul>
+                    <li>Máximo permitido: <span class="highlight">una PC por equipo.</span></li>
+                    <li>Guardar las partidas que se jugarán para evitar inconvenientes.</li>
+                    <li>Es obligatorio tener <span class="highlight">Discord descargado</span> y configurado.</li>
+                    <li>Mapas permitidos: <span class="highlight">Bermuda, Purgatorio y Kalahari.</span></li>
+                </ul>
+            </div>
+
+            <div class="payment-methods">
+                <h3>Detalles de Inscripción</h3>
+                <p>Inscripción: <span class="highlight">60 BS por escuadra</span></p>
+                <p>Aceptamos las siguientes monedas:</p>
+                <ul>
+                    <li>Bolivianos</li>
+                    <li>Soles</li>
+                    <li>Pesos Argentinos</li>
+                    <li>Pesos Chilenos</li>
+                    <li>Reales</li>
+                </ul>
+                <p>Métodos de pago:</p>
+                <ul>
+                    <li>Tigo Money</li>
+                    <li>Yape</li>
+                    <li>Pix</li>
+                    <li>Cualquier banca móvil con QR</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="contact-info">
+            <p>Para poder participar, escribe al siguiente número: <strong>+591 64371867</strong></p>
+            <p>Grupo de WhatsApp: <a href="https://chat.whatsapp.com/BcsoCRGV9ae3N6JwbrzTJP" target="_blank">Haz clic aquí</a> para más eventos.</p>
+        </div>
+    </div>
+
+    <!-- Inicializar Particles.js -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#00ff00"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#00ff00"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 5,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00ff00",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+</body>
+</html>
+

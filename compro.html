@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por Comprar el Pack de Edición</title>
+
+    <!-- Cargar Font Awesome desde CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Cargar Google Fonts para la fuente "Orbitron" -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- Cargar fuente Namaku para los botones -->
+    <link href="https://fonts.googleapis.com/css2?family=Namaku&display=swap" rel="stylesheet">
+
+    <!-- Cargar Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <style>
+        /* Estilos Generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Namaku', sans-serif;  /* Fuente general */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;  /* Establecer la altura completa de la ventana */
+            overflow-x: hidden;  /* Evitar que el contenido se desborde horizontalmente */
+            background-color: black;  /* Fondo negro */
+            box-sizing: border-box;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);  /* Fondo oscuro transparente */
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            border: 2px solid #00ff00;
+            margin: 0 20px; /* Ajustar margen para pantallas más pequeñas */
+        }
+
+        /* Título principal */
+        .title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #00ff00;
+            text-shadow: 0 0 15px #00ff00;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Texto de agradecimiento */
+        .thanks-text {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        /* Enlace para acceder */
+        .access-link {
+            font-size: 1.2rem;
+            color: #00ff00;
+            text-decoration: none;
+            padding: 12px 30px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: transparent;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .access-link:hover {
+            background-color: #00ff00;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        /* Asegurar que la capa de Particles cubra todo */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Crear el contenedor de partículas -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <!-- Título de la página -->
+        <h1 class="title">Gracias por Comprar el Pack de Edición</h1>
+
+        <!-- Texto de agradecimiento -->
+        <p class="thanks-text">Estamos agradecidos por tu confianza. El día de hoy tendrás todo el apoyo para comenzar a crear.</p>
+
+        <!-- Enlace para acceder -->
+        <a href="https://drive.google.com/drive/folders/1dK8e0Mg3kOaepbY7-0h4NXp7m89nsQuS?usp=drive_link" class="access-link" target="_blank">Haz clic aquí para acceder a las apps, videos y más</a>
+    </div>
+
+    <!-- Inicializar Particles.js con el fondo animado de tormenta -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100, /* Número de partículas */
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#00ff00"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#00ff00"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 5,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00ff00",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+</body>
+</html>

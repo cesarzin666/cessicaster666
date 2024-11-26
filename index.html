@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CESSITAR 2.0</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Namaku&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Namaku', sans-serif;
+            background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+            color: white;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* Fondo de video */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            filter: brightness(0.5) blur(2px);
+        }
+
+        /* Partículas */
+        .particles-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Título animado */
+        .header {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            color: #00ff00;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0 0 30px #00ff00, 0 0 60px #00ff00;
+            animation: pulse 2s infinite alternate;
+        }
+
+        .header h1 span {
+            display: inline-block;
+            animation: float 4s infinite ease-in-out;
+        }
+
+        /* Botones futuristas */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            text-decoration: none;
+            background: linear-gradient(90deg, #004e92, #00ff00);
+            border-radius: 20px;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 20px #00ff00;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .button:hover {
+            transform: scale(1.1) translateY(-10px);
+            box-shadow: 0 0 50px #00ff00, 0 0 100px #00ff00;
+        }
+
+        .button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(45deg);
+            transition: left 0.4s;
+        }
+
+        .button:hover::after {
+            left: 100%;
+        }
+
+        /* Animaciones clave */
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 40px #00ff00, 0 0 80px #00ff00;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            color: #00ff00;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="background-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-holographic-3d-interface-1092-large.mp4" type="video/mp4">
+    </video>
+
+    <!-- Partículas -->
+    <div class="particles-background" id="particles-js"></div>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <h1>
+            <span>CESSITAR</span>
+        </h1>
+    </div>
+
+    <!-- Botones -->
+    <div class="buttons-container">
+        <a href="torneos.html" class="button"><i class="fas fa-trophy"></i> Torneos</a>
+        <a href="edicion.html" class="button"><i class="fas fa-edit"></i> Cursos de Edición</a>
+        <a href="casteo.html" class="button"><i class="fas fa-microphone"></i> Casteos</a>
+        <a href="redes.html" class="button"><i class="fas fa-share-alt"></i> Redes Sociales</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+       
+    </div>
+
+    <!-- Partículas JS -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 120,
+                    density: {
+                        enable: true,
+                        value_area: 1000
+                    }
+                },
+                color: {
+                    value: "#00ff00"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#00ff00"
+                    }
+                },
+                opacity: {
+                    value: 0.7,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 0.5,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00ff00",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            }
+        });
+    </script>
+</body>
+</html>
